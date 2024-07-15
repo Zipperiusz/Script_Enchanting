@@ -237,9 +237,9 @@ extern "C" __declspec(dllexport)
 gSScriptInit const* GE_STDCALL ScriptInit(void)
 {
 	GetScriptAdmin().LoadScriptDLL("Script_Game.dll");
-	GetScriptAdmin().LoadScriptDLL("Script_ItemUseFuncEnabler.dll");
-	if (!GetScriptAdmin().IsScriptDLLLoaded("Script_ItemUseFuncEnabler.dll")) {
-		GE_FATAL_ERROR_EX("Script_Enchanting", "Missing Script_ItemUseFuncEnabler.dll file.");
+	GetScriptAdmin().LoadScriptDLL("Script_G3Fixes.dll");
+	if (!GetScriptAdmin().IsScriptDLLLoaded("Script_G3Fixes.dll")) {
+		GE_FATAL_ERROR_EX("Script_Enchanting", "Missing Script_G3Fixes.dll.");
 	}
 	spy = new zSpy();
 	spy->Send("Enchanting script loaded.");
